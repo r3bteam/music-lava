@@ -91,7 +91,7 @@ ${videos.map(video2 => `[**${++index} **] \`${video2.title}\``).join('\n')}`)
 			}
 			return handleVideo(video, msg, voiceChannel);
 		}
-	} else if (command === `skip`) {
+	} else if (command === `s`) {
 		if (!msg.member.voiceChannel) return msg.channel.send('You are not in a voice channel!');
 		if (!serverQueue) return msg.channel.send('There is nothing playing that I could skip for you.');
 		serverQueue.connection.dispatcher.end('Skip command has been used!');
